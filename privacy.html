@@ -140,4 +140,112 @@
       padding-bottom: 0;
     }
 
-    .
+    .policy-item h2 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 0.4rem;
+    }
+
+    .policy-item p {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+      margin-bottom: 0.65rem;
+    }
+
+    .policy-item p:last-child {
+      margin-bottom: 0;
+    }
+
+    .policy-item strong {
+      color: var(--text-main);
+    }
+
+    .bottom-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      margin-top: 0.5rem;
+    }
+
+    .bottom-links a {
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    .bottom-links a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin-top: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <span class="badge">Little Things</span>
+      <h1>Privacy Policy</h1>
+      <p class="effective-date"><strong>Effective Date:</strong> November 17, 2026</p>
+    </header>
+
+    <section class="card contact-card" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact Support</h2>
+      <p>Have questions about your privacy or the app? Reach out anytime.</p>
+      <div class="email-box">
+        <a class="email-link" href="mailto:appsupport@piselli.us">appsupport@piselli.us</a>
+        <button class="copy-btn" type="button" onclick="copyEmail(this)">Copy Email</button>
+      </div>
+    </section>
+
+    <section class="card" aria-label="Privacy Policy Details">
+      <div class="policy-item">
+        <h2>Overview</h2>
+        <p>
+          Little Things ("we," "our," or "us") respects your privacy. In the free version, all reminder titles and settings are stored anonymously as guest sessions with no personally identifying information collected. In the paid version, you may create an account and sync calendar permissions strictly to schedule reminders around your events.
+        </p>
+      </div>
+
+      <div class="policy-item">
+        <h2>Information We Collect</h2>
+        <p>
+          <strong>Reminder Titles:</strong> Stored securely and synced if using the paid cloud account.
+        </p>
+        <p>
+          <strong>Calendar Data:</strong> Accessed with your permission solely in-memory to coordinate reminders with your schedule. We do not store or sell your calendar details.
+        </p>
+      </div>
+    </section>
+
+    <nav class="bottom-links" aria-label="Footer Navigation">
+      <a href="https://rjpiselli.github.io/little-things/about.html">About this App</a>
+      <a href="https://rjpiselli.github.io/little-things/support.html">Support and FAQ</a>
+    </nav>
+
+    <footer>
+      <p>© <span id="year"></span> Little Things. All rights reserved.</p>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    function copyEmail(button) {
+      navigator.clipboard.writeText("appsupport@piselli.us").then(() => {
+        const originalText = button.textContent;
+        button.textContent = "Copied!";
+        setTimeout(() => {
+          button.textContent = originalText;
+        }, 2000);
+      });
+    }
+  </script>
+</body>
+</html>
