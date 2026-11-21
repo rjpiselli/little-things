@@ -1,32 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Little Things - Read Me</title>
-    <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 40px auto; padding: 0 20px; }
-        h1, h2 { color: #111; }
-        h1 { border-bottom: 2px solid #eaeaea; padding-bottom: 10px; }
-        ul { padding-left: 20px; }
-        li { margin-bottom: 8px; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Little Things</title>
+  <style>
+    :root {
+      --primary: #D92A63;
+      --bg: #f8f9fb;
+      --card-bg: #ffffff;
+      --text-main: #18181b;
+      --text-muted: #52525b;
+      --border: #e4e4e7;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.65;
+      padding: 2rem 1rem;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-top: 4px solid var(--primary);
+      border-radius: 16px;
+      padding: 2.5rem 1.75rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text-main);
+      margin-bottom: 0.75rem;
+    }
+
+    .meta {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+    }
+  </style>
 </head>
 <body>
-    <h1>Little Things</h1>
-    <p>A lightweight iOS and Android app designed to prompt thoughtful everyday actions without feeling robotic or predictable.</p>
-
-    <h2>How It Works</h2>
-    <ul>
-        <li><strong>Create a Reminder:</strong> Enter a simple prompt (e.g., <em>"Text my wife"</em>).</li>
-        <li><strong>Set Your Window:</strong> Choose the days of the week and a general time range.</li>
-        <li><strong>Randomized Delivery:</strong> Little Things delivers your reminder at a random moment inside your chosen window so it feels natural rather than scheduled.</li>
-    </ul>
-
-    <h2>Versions</h2>
-    <ul>
-        <li><strong>Free:</strong> All reminders and schedules stay locally on your device. No account required.</li>
-        <li><strong>Paid:</strong> Optional account creation with calendar syncing so reminders automatically work around your existing schedule.</li>
-    </ul>
+  <main class="container">
+    <section class="card">
+      <h1>Little Things</h1>
+      <p class="meta">Created in 2026 by Ryan Piselli</p>
+    </section>
+  </main>
 </body>
 </html>
